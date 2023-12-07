@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="looping"
+        android:title="@string/looping_title"
+        android:summary="@string/looping_summary"
+        android:defaultValue="true" />
+    <CheckBoxPreference
+        android:key="shuffling"
+        android:title="@string/shuffling_title"
+        android:summary="@string/shuffling_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>

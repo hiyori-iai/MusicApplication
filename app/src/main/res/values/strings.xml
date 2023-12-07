@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <string name="title1">1. Intro</string>
+    <string name="title2">2. This Love (Instrumental)</string>
+    <string name="title3">3. Goodbye Pretty People</string>
+    <string name="title4">4. Kawaii Nuigurumi</string>
+    <string name="title5">5. Arana</string>
+    <string name="title6">6. Blue bossa</string>
+    <string name="artist1">Brakhage</string>
+    <string name="artist2">Brakhage</string>
+    <string name="artist3">Eaters</string>
+    <string name="artist4">[guÿôm]</string>
+    <string name="artist5">Jazz at Mladost Club</string>
+    <string name="artist6">Jazz at Mladost Club</string>
+    <string name="settings_label">Settings</string>
+    <string name="settings_title">Music App settings</string>
+    <string name="about_label">About</string>
+    <string name="looping_title">Loop play</string>
+    <string name="looping_summary">Loop playing music</string>
+    <string name="shuffling_title">Shuffle play</string>
+    <string name="shuffling_summary">Shuffle play the music</string>
+    <string name="about_content">\nThis is a music app contains looping and shuffle play mode.
+        The music was obtained from the free source provided from FMA(Free Music Archive).\n\n
+        -Credits-\n
+        Song: Intro, Artist Name: Brakhage, License Type: CC BY-NC-ND\n
+        Song: This Love (Instrumental), Artist Name: Brakhage, License Type: CC BY-NC-ND\n
+        Song: Goodbye Pretty People, Artist Name: Eaters, License Type: CC BY\n
+        Song: Kawaii Nuigurumi, Artist Name: [guÿôm], License Type: CC BY-NC-ND\n
+        Song: Arana, Artist Name: Jazz at Mladost Club, License Type: CC BY-NC-SA\n
+        Song: Blue bossa, Artist Name: Jazz at Mladost Club, License Type: CC BY-NC-SA
+
+    </string>
+</resources>
