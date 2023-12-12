@@ -53,7 +53,7 @@ public class PlayerActivity extends AppCompatActivity {
     private String[] title_playlist;
 
     //rotation related
-    private static boolean appInitiated;
+    private static boolean appInitiated; // name change suggestion: "rotated"  (flip the boolean value)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class PlayerActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         playButton = findViewById(R.id.playButton);
         pauseButton = findViewById(R.id.pauseButton);
-        exitButton = findViewById(R.id.exitButton);
+        //exitButton = findViewById(R.id.exitButton);
         nextButton = findViewById(R.id.next_button);
         prevButton = findViewById(R.id.previous_button);
         rwdButton = findViewById(R.id.rewind_button);
@@ -121,6 +121,8 @@ public class PlayerActivity extends AppCompatActivity {
                 mediaPlayer.isPlaying()).commit();
         prepared = false;
         mediaPlayer.reset();
+        timer.purge();
+        timer.cancel();
     }
 
     private void setUpSeekBar() {
@@ -189,11 +191,14 @@ public class PlayerActivity extends AppCompatActivity {
                 rwd10();
             }
         });
-        exitButton.setOnClickListener(view -> {
+        /*exitButton.setOnClickListener(view -> {
             Log.d(TAG, "Exit requested...");
+            timer.cancel();
             mediaPlayer.stop();
             mediaPlayer.release();
-        });
+            //onStop();
+            //onBackPressed();
+        });*/
     }
 
     private void fwd10() {
@@ -316,6 +321,7 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void playNext() {
+        appInitiated = true;
         Log.d(TAG, "In playNext");
         String songName = dbase.getSelection();
         //getIndexFromArray (=n)
@@ -326,6 +332,7 @@ public class PlayerActivity extends AppCompatActivity {
             if (!loop) {
                 mediaPlayer.stop();
                 mediaPlayer.release();
+                return;
             }
         }
         index++;
@@ -337,9 +344,11 @@ public class PlayerActivity extends AppCompatActivity {
         mediaPlayer.reset();
         currPosition = 0;
         setUpMediaPlayer();
+        return;
     }
 
     private void playPrev() {
+        appInitiated = true;
         Log.d(TAG, "In playPrev");
         String songName = dbase.getSelection();
         int index = indexOf(title_playlist, songName);
